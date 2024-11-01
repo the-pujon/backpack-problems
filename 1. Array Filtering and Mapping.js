@@ -14,3 +14,4 @@ const filterOutFemales = (people) => {
 };
 
 console.log(filterOutFemales(people));
+// Output: ["John", "Jim"]
