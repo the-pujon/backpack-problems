@@ -12,4 +12,4 @@ const sortCarsByYear = (cars) => {
 };
 
 console.log(sortCarsByYear(cars));
-// Output: [{ make: "Toyota", model: "Corolla", year: 2020 }, { make: "Chevrolet", model: "Camaro", year: 2019 }, { make: "Ford", model: "Mustang", year: 2021 }]
+// Output: [{ make: "Chevrolet", model: "Camaro", year: 2019 }, { make: "Toyota", model: "Corolla", year: 2020 }, { make: "Ford", model: "Mustang", year: 2021 }]

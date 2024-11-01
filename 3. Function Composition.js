@@ -6,20 +6,22 @@ const double = (num) => num * 2;
 const addFive = (num) => num + 5;
 
 // Compose function using map
-//const composeWithMap = (...fns) => (x) => {
-//    let result = x;
-//    fns.map(fn => {
-//      result = fn(result);
-//    });
-//    return result;
-//  };
+const composeWithMap =
+  (...fns) =>
+  (x) => {
+    let result = x;
+    fns.map((fn) => {
+      result = fn(result);
+    });
+    return result;
+  };
 
 // Compose function using reduce
-const compose =
-  (...fns) =>
-  (x) =>
-    fns.reduce((acc, fn) => fn(acc), x);
+//const compose =
+//  (...fns) =>
+//  (x) =>
+//    fns.reduce((acc, fn) => fn(acc), x);
 
-const composedFunction = compose(square, double, addFive);
+const composedFunction = composeWithMap(square, double, addFive);
 
-console.log(composedFunction(3)); // Output: 38
+console.log(composedFunction(3)); // Output: 23
